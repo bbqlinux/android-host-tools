@@ -1,8 +1,8 @@
 # Maintainer: Daniel Hillenbrand <codeworkx@bbqlinux.org>
 
 pkgname=android-host-tools
-pkgver=4.2.2
-pkgrel=2
+pkgver=4.3.0
+pkgrel=1
 pkgdesc="Android Host Tools"
 arch=('any')
 provides=('fastboot' 'img2simg' 'minigzip' 'mkbootfs' 'mkbootimg' 'mkimage' 'mksdcard' 'mkyaffs2image' 'simg2img' 'simg2simg' 'unpackbootimg' 'unyaffs' 'zipalign')
