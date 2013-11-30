@@ -1,7 +1,7 @@
-# Maintainer: Daniel Hillenbrand <codeworkx@bbqlinux.org>
+# Maintainer: Daniel Hillenbrand <codeworkx [at] bbqlinux [dot] org>
 
 pkgname=android-host-tools
-pkgver=4.3.0
+pkgver=4.4.0
 pkgrel=1
 pkgdesc="Android Host Tools"
 arch=('any')
