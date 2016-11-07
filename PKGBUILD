@@ -1,11 +1,11 @@
 # Maintainer: Daniel Hillenbrand <codeworkx [at] bbqlinux [dot] org>
 
 pkgname=android-host-tools
-pkgver=6.0.1
+pkgver=7.1.0
 pkgrel=1
 pkgdesc="Android Host Tools"
 arch=('any')
-provides=('fastboot' 'img2simg' 'minigzip' 'mkbootfs' 'mkbootimg' 'mkyaffs2image' 'simg2img' 'unpackbootimg' 'zipalign')
+provides=('dtbToolCM' 'fastboot' 'img2simg' 'minigzip' 'mkbootfs' 'mkbootimg' 'mkyaffs2image' 'simg2img' 'unpackbootimg' 'zipalign')
 url="https://github.com/bbqlinux/android-host-tools"
 license=('APACHE2')
 
@@ -13,7 +13,8 @@ package() {
     mkdir -p "$pkgdir/opt" "$pkgdir/usr/bin"
     
     cd "$pkgdir"
-
+    
+    install -Dm755 "$srcdir/opt/android-host-tools/bin/dtbToolCM" opt/android-host-tools/bin/dtbToolCM
     install -Dm755 "$srcdir/opt/android-host-tools/bin/fastboot" opt/android-host-tools/bin/fastboot
     install -Dm755 "$srcdir/opt/android-host-tools/bin/img2simg" opt/android-host-tools/bin/img2simg
     install -Dm755 "$srcdir/opt/android-host-tools/bin/minigzip" opt/android-host-tools/bin/minigzip
@@ -24,6 +25,7 @@ package() {
     install -Dm755 "$srcdir/opt/android-host-tools/bin/unpackbootimg" opt/android-host-tools/bin/unpackbootimg
     install -Dm755 "$srcdir/opt/android-host-tools/bin/zipalign" opt/android-host-tools/bin/zipalign
 
+    ln -s "/opt/android-host-tools/bin/dtbToolCM" "$pkgdir/usr/bin/dtbToolCM"
     ln -s "/opt/android-host-tools/bin/fastboot" "$pkgdir/usr/bin/fastboot"
     ln -s "/opt/android-host-tools/bin/img2simg" "$pkgdir/usr/bin/img2simg"
     ln -s "/opt/android-host-tools/bin/minigzip" "$pkgdir/usr/bin/minigzip"
