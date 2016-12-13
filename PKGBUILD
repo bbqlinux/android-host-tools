@@ -2,7 +2,7 @@
 
 pkgname=android-host-tools
 pkgver=7.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Android Host Tools"
 arch=('any')
 provides=('dtbToolCM' 'fastboot' 'img2simg' 'minigzip' 'mkbootfs' 'mkbootimg' 'mkyaffs2image' 'simg2img' 'unpackbootimg' 'zipalign')
