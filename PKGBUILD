@@ -8,6 +8,7 @@ arch=('any')
 provides=('dtbToolCM' 'fastboot' 'img2simg' 'minigzip' 'mkbootfs' 'mkbootimg' 'mkyaffs2image' 'simg2img' 'unpackbootimg' 'zipalign')
 url="https://github.com/bbqlinux/android-host-tools"
 license=('APACHE2')
+depends=('libc++')
 
 package() {
     mkdir -p "$pkgdir/opt" "$pkgdir/usr/bin"
